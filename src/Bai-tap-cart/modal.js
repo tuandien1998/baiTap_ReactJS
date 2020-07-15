@@ -5,7 +5,7 @@ export default class Modal extends Component {
     super(props);
 
     this.state = {
-      isDelete: false,
+      isDuplicate: false,
     };
   }
 
@@ -17,7 +17,7 @@ export default class Modal extends Component {
     const { listCart } = this.props;
 
     return listCart.map((product) => {
-      return (this.state.isDelete? "":
+      return (this.state.isDuplicate? "":
         <tr key={product.maSP}>
           <td>{product.maSP}</td>
           <td>{product.tenSP}</td>
